@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-require('dotenv').config();
+require('dotenv').config();          // For calling database URL from .env file
 const connectionDb = async()=>{
     try{
         const connect = await mongoose.connect(process.env.CONNECTION_STRING);
