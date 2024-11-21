@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 require('dotenv').config();
-const connectDb = async()=>{
+const connectionDb = async()=>{
     try{
         const connect = await mongoose.connect(process.env.CONNECTION_STRING);
         console.log("Database connected : ", connect.connection.host, connect.connection.name);
@@ -9,4 +9,4 @@ const connectDb = async()=>{
         process.exit(1);              //termiante the process immediatly , 0 success , 1 fail
     }
 }
-module.exports = {connectDb};
+module.exports = {connectionDb};
